@@ -36,19 +36,22 @@ This means that anyone in a position to observe network traffic (e.g. on a share
 
 ### Result
 
+### Result
+
 Four distinct pieces of sensitive data were confirmed visible in cleartext across the capture:
 
 | Evidence | What It Shows |
 |---|---|
-| `screenshots/01-sqli-payload-cleartext.png` | The raw SQL injection payload (`' OR 1=1--`) sent in the login request body, fully readable |
-| `screenshots/02-whoami-email-cleartext.png` | The authenticated account's email address (`admin@juice-sh.op`) returned in a plain-text response |
-| `screenshots/03-jwt-token-cleartext.png` | The session JWT issued at login, visible in full in the login response |
-| `screenshots/04-basket-request-token-reuse.png` | The same JWT being reused in both the `Authorization` header and a `Cookie` header on a later request, alongside the request for basket contents |
-| `screenshots/05-basket-response-contents.png` | The actual basket contents (products, quantities) returned in the response body, also in plain text |
+| [Traffic Analysis SQLi Payload Cleartext](./Traffic%20Analysis%20SQLi%20Payload%20Cleartext.png) | The raw SQL injection payload (`' OR 1=1--`) sent in the login request body, fully readable |
+| [Traffic Analysis Whoami email Cleartext](./Traffic%20Analysis%20Whoami%20email%20Cleartext.png) | The authenticated account's email address (`admin@juice-sh.op`) returned in a plain-text response |
+| [Traffic Analysis JWT Token cleartext](./Traffic%20Analysis%20JWT%20Token%20cleartext.png) | The session JWT issued at login, visible in full in the login response |
+| [Traffic Analysis Basket Request Token Reuse](./Traffic%20Analysis%20Basket%20Request%20Token%20Reuse.png) | The same JWT being reused in both the `Authorization` header and a `Cookie` header on a later request, alongside the request for basket contents |
+| [Traffic Analysis Basket Response Contents](./Traffic%20Analysis%20Basket%20Response%20Contents.png) | The actual basket contents (products, quantities) returned in the response body, also in plain text |
 
 Additionally, a protocol hierarchy overview was captured to summarize the composition of the full capture:
 
-- `screenshots/06-protocol-hierarchy-overview.png`
+- [Wireshark General Traffic overview](./Wireshark%20General%20Traffic%20overview.jpg)
+
 
 ### Why It Matters
 
