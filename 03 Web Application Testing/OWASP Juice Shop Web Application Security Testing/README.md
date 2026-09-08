@@ -11,21 +11,20 @@ This project documents a hands-on web application penetration test against **OWA
 - **Browser:** Firefox (configured to route traffic through Burp)
 - **Network:** Host-only adapter, target accessed via `http://<kali-ip>:3000`
 
-**Methodology:**
-All traffic between the browser and the application was routed through Burp Suite's intercepting proxy, allowing full visibility and manipulation of HTTP requests. Findings were identified through manual testing, guided by the OWASP Top 10 categories: Injection, Broken Access Control, Broken Authentication, and Cross-Site Scripting (XSS).
+**Methodology:** All traffic between the browser and the application was routed through Burp Suite's intercepting proxy, allowing full visibility and manipulation of HTTP requests. Findings were identified through manual testing, guided by the OWASP Top 10 categories: Injection, Broken Access Control, Broken Authentication, and Cross-Site Scripting (XSS).
 
 ---
 
 ## Findings Index
-
 | # | Finding | Category | Severity | Write-up |
 |---|---|---|---|---|
-| 1 | Authentication bypass via SQL Injection | Injection | Critical | [01-sqli-auth-bypass](./01-sqli-auth-bypass/README.md) |
-| 2 | Unauthenticated information disclosure (raw SQL error) | Security Misconfiguration / Injection | Medium | [02-sqli-info-disclosure](./02-sqli-info-disclosure/README.md) |
-| 3 | IDOR – Basket contents exposed | Broken Access Control | High | [03-idor-basket](./03-idor-basket/README.md) |
-| 4 | IDOR – User account details exposed | Broken Access Control | High | [04-idor-users](./04-idor-users/README.md) |
-| 5 | DOM-based Cross-Site Scripting (XSS) | XSS | High | [05-xss-dom](./05-xss-dom/README.md) |
-| 6 | Account takeover via weak/guessable security question | Broken Authentication | High | [06-broken-auth](./06-broken-auth/README.md) |
+| 1 | Authentication bypass via SQL Injection | Injection | Critical | [SQLInjection Authentication Bypass](../SQLInjection%20Authentication%20Bypass/README.md) |
+| 2 | Unauthenticated information disclosure (raw SQL error) | Security Misconfiguration / Injection | Medium | [Unauthenticated Information Disclosure](../Unauthenticated%20Information%20Disclosure/README.md) |
+| 3 | IDOR – Basket & user account details exposed | Broken Access Control | High | [Broken Access Control](../Broken%20Access%20Control/README.md) |
+| 4 | DOM-based Cross-Site Scripting (XSS) | XSS | High | [Cross Site Scripting(XSS)](../Cross%20Site%20Scripting(XSS)/README.md) |
+| 5 | Account takeover via weak/guessable security question | Broken Authentication | High | [Broken Authentication](../Broken%20Authentication/README.md) |
+
+
 
 Each folder above contains its own README (full write-up: description, steps to reproduce, evidence, impact, remediation) plus a `screenshots/` subfolder with the supporting evidence for that specific finding.
 
