@@ -16,14 +16,15 @@ This project documents a hands-on web application penetration test against **OWA
 ---
 
 ## Findings Index
-
 | # | Finding | Category | Severity | Write-up |
 |---|---|---|---|---|
-| 1 | Authentication bypass via SQL Injection | Injection | Critical | [SQLInjection Authentication Bypass](./SQLInjection%20Authentication%20Bypass/README.md) |
-| 2 | Unauthenticated information disclosure (raw SQL error) | Security Misconfiguration / Injection | Medium | [Unauthenticated Information Disclosure](./Unauthenticated%20Information%20Disclosure/README.md) |
-| 3 | IDOR – Basket & user account details exposed | Broken Access Control | High | [Broken Access Control](./Broken%20Access%20Control/README.md) |
-| 4 | DOM-based Cross-Site Scripting (XSS) | XSS | High | [Cross Site Scripting(XSS)](./Cross%20Site%20Scripting(XSS)/README.md) |
-| 5 | Account takeover via weak/guessable security question | Broken Authentication | High | [Broken Authentication](./Broken%20Authentication/README.md) |
+| 1 | Authentication bypass via SQL Injection | Injection | Critical | [SQLInjection Authentication Bypass](../SQLInjection%20Authentication%20Bypass/README.md) |
+| 2 | Unauthenticated information disclosure (raw SQL error) | Security Misconfiguration / Injection | Medium | [Unauthenticated Information Disclosure](../Unauthenticated%20Information%20Disclosure/README.md) |
+| 3 | IDOR – Basket & user account details exposed | Broken Access Control | High | [Broken Access Control](../Broken%20Access%20Control/README.md) |
+| 4 | DOM-based Cross-Site Scripting (XSS) | XSS | High | [Cross Site Scripting(XSS)](../Cross%20Site%20Scripting(XSS)/README.md) |
+| 5 | Account takeover via weak/guessable security question | Broken Authentication | High | [Broken Authentication](../Broken%20Authentication/README.md) |
+
+
 
 Each folder above contains its own README (full write-up: description, steps to reproduce, evidence, impact, remediation) plus a `screenshots/` subfolder with the supporting evidence for that specific finding.
 
